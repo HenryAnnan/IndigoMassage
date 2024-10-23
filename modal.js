@@ -61,6 +61,7 @@ form.addEventListener('submit', function (event) {
         })
         .then((result) => {
             console.log(result);
+            form.reset();
             alert("Booking made successfully");
             dialog.close()
             location.reload()
