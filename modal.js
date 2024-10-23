@@ -60,4 +60,6 @@ book.addEventListener('click', function () {
         })
         .then((result) => console.log(result))
         .catch((error) => console.error('Error:', error));
+
+        alert("Your booking has been successfully made")
 });
