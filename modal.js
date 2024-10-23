@@ -27,7 +27,7 @@ book.addEventListener('click', function () {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let treatment = document.getElementById('treatment').value;
-    console.log("V2 Code")
+    console.log("V2 Code");
 
     if (!name || !email || !treatment) {
         alert("Please fill out all fields before booking.");
@@ -58,8 +58,9 @@ book.addEventListener('click', function () {
             }
             return response.json();
         })
-        .then((result) => console.log(result))
+        .then((result) => {
+            console.log(result);
+            alert("Booking made successfully");
+        })
         .catch((error) => console.error('Error:', error));
-
-        alert("Your booking has been successfully made")
 });
