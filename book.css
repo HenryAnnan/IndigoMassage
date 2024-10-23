@@ -49,8 +49,7 @@ a{
 .book{
     max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    padding: 10px;
 }
 .book h2{
     color: #1E0257;
@@ -61,7 +60,7 @@ a{
     cursor: pointer;
 }
 
-#check{
+#check, .btn-Link{
     font-size: 1rem;
     font-weight: 800;
     color: white;
@@ -80,4 +79,59 @@ a{
 
 .bookItem{
     cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .book{
+        flex-direction: column;
+    }
+
+}
+
+.dialog-form{
+    margin:0 auto;
+    text-align: center;
+}
+
+.select{
+    margin-top: 10px;
+}
+
+#datePicker{
+    border: #330099 3px solid;
+    border-radius: 5px;
+}
+
+.btn-Link{
+    margin-top: 10px;
+}
+
+.dialog{
+    border-radius: 20px;
+    border: 5px #330099 solid;
+}
+
+.dialog h2{
+    color: #1E0257;
+}
+/* Add this to your CSS file */
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+
+#close {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.dialog-header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.click-to-book{
+    font-size: 0.8rem;
+    margin-top: -20px;
+    margin-bottom: 0;
 }

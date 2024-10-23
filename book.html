@@ -14,7 +14,7 @@
   <div class="container" id="navContainer">
     <h1 class="navTitle">Indigo Massage Therapy</h1>
     <div class="navLinks">
-      <a  href="#">Home</a>
+      <a  href="index.html">Home</a>
       <a class="activePage" href="#">Book</a>
       <a href="#">Contact</a>
     </div>
@@ -22,16 +22,41 @@
 </nav>
 
 <section class="book">
-  <div class="datePicker">
-    <h2>Pick Date</h2>
-    <input id="datePicker" type="date">
-    <br>
-    <button id="check">Check Availability</button>
-  </div>
+  <h1>Available Appointments</h1>
+  <p class="click-to-book">Click to book</p>
   <div class="slots">
-    <p id="1" class="bookItem" >02-10-2024 - 13:00  Availability</p>
+    <p id="1" class="bookItem" ></p>
   </div>
+  <h4>Can't find an appointment?</h4>
+  <a href="#" class="btn-Link">Contact Us!</a>
 </section>
 
+<dialog class="dialog" id="dialog">
+  <div class="dialog-header">
+    <p id="close">X</p>
+    <h2>Booking</h2>
+  </div>
+    <p id="date-display">02-10-2024 - 13:00</p>
+    <form method="dialog" class="dialog-form">
+      <input  required type="text" placeholder="Name" class="form-input" id="name">
+      <input  required type="email" placeholder="Email" class="form-input" id="email">
+      <br>
+      <select required class="select" id="treatment">
+        <option value="Indian Head Massage">Indian Head Massage</option>
+        <option value="Hot Stone Massage">Hot Stone Massage</option>
+        <option value="Swedish Massage">Swedish Massage</option>
+        <option value="Aromatherapy">Aromatherapy</option>
+
+
+      </select>
+      <br>
+      <button class="btn-Link" id="book">Book</button>
+    </form>
+</dialog>
+
+
+
+<script src="modal.js"></script>
+<script src="addData.js"></script>
 </body>
 </html>
