@@ -1,4 +1,4 @@
-// modal.js
+// modal.js - Henry Annan
 const dialog = document.getElementById('dialog');
 const close = document.getElementById('close');
 const bookItems = document.querySelectorAll('.bookItem');
