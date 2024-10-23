@@ -27,11 +27,10 @@ book.addEventListener('click', function () {
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let treatment = document.getElementById('treatment').value;
+    console.log("V2 Code")
 
-    if (!email){
-        return;
-    }
-    if (!name){
+    if (!name || !email || !treatment) {
+        alert("Please fill out all fields before booking.");
         return;
     }
 
