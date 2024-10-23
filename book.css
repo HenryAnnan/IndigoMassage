@@ -1,0 +1,83 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    background: #fcfcf6;
+}
+
+/* NAV  */
+nav{
+    background: #330099;
+}
+.container{
+    max-width: 1000px;
+}
+
+nav .container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navLinks{
+    margin: auto 0;
+    color: white;
+    font-size: 1.15rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.activePage{
+    text-decoration: underline;
+}
+.navTitle{
+    color: white;
+}
+
+@media (max-width: 800px) {
+    nav .container{
+        flex-direction: column;
+        margin: auto;
+    }
+
+}
+
+/*  Booking */
+
+.book{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.book h2{
+    color: #1E0257;
+}
+
+#datePicker{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#check{
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    background: #330099;
+    padding:10px 25px;
+    border-radius: 1000px;
+    border: none ;
+    margin-top: 1.5em;
+    cursor: pointer;
+}
+
+.slots{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.bookItem{
+    cursor: pointer;
+}
