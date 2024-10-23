@@ -3,7 +3,7 @@ const dialog = document.getElementById('dialog');
 const close = document.getElementById('close');
 const bookItems = document.querySelectorAll('.bookItem');
 const date = document.getElementById('date-display');
-const book = document.getElementById('book');
+const form = document.getElementById('booking-form'); // Assuming the form has an id of 'booking-form'
 
 const apiURL = 'https://indigoapi.henryannan.com/addBooking'; // Ensure the endpoint is correct
 
@@ -23,11 +23,12 @@ close.addEventListener('click', function(event) {
     dialog.close(); // Use close() to hide the dialog
 });
 
-book.addEventListener('click', function () {
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let treatment = document.getElementById('treatment').value;
-    console.log("V2 Code");
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let treatment = document.getElementById('treatment').value.trim();
 
     if (!name || !email || !treatment) {
         alert("Please fill out all fields before booking.");
@@ -61,6 +62,8 @@ book.addEventListener('click', function () {
         .then((result) => {
             console.log(result);
             alert("Booking made successfully");
+            dialog.close()
+            location.reload()
         })
         .catch((error) => console.error('Error:', error));
 });
