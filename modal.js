@@ -28,6 +28,13 @@ book.addEventListener('click', function () {
     let email = document.getElementById('email').value;
     let treatment = document.getElementById('treatment').value;
 
+    if (!email){
+        return;
+    }
+    if (!name){
+        return;
+    }
+
     const raw = JSON.stringify({
         "id": id,
         "name": name,
